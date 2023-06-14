@@ -11,30 +11,97 @@
   <meta property="og:title" content="Maximiliano Aguirre's Portfolio" />
   <meta property="og:image" content="https://svg.maximilianoaguirre.com/images/1.jpg" />
 
-  <title>Maxi's portfolio</title>
+  <title>Portfolio</title>
 
+  <link rel="icon" href="m-solid.svg" />
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="cards.css">
+  <script src="https://kit.fontawesome.com/07108a9816.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <script src="anime.min.js"></script>
 
   <div id="tiles"></div>
 
   <div id="title" class="centered">
+
     <h1 id="name">
-      Maxi Aguirre
+      Maximiliano
+      Aguirre
     </h1>
+
     <h1 id="subtitle">
       <span id='job-titles'></span>
       <div class='console-underscore' id='console-underscore'>&#95;</div>
     </h1>
+
   </div>
 
+  <div id="links">
+
+    <div class="card" id="cv" data-link="https://cv.maximilianoaguirre.com">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-solid fa-user"></i> Webpage CV</p>
+        <p class="text-body">Curriculum vitae as a webpage.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="cv-pdf" data-link="https://1drv.ms/w/s!ArUW7Y93QIqFrwsw5mz1yv4Ix9Mu">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-solid fa-file-pdf"></i> PDF CV</p>
+        <p class="text-body">Summary of my professional achievements as a PDF.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="bash" data-link="https://bash.maximilianoaguirre.com">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-solid fa-terminal"></i> Bash emulator</p>
+        <p class="text-body">Fun rework of my CV as a bash emulator hosted in a webpage.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="svg" data-link="https://svg.maximilianoaguirre.com">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-solid fa-image"></i> SVG summary</p>
+        <p class="text-body">Fun project to summarize my life in a SVG hosted as a webpage.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="linkedin" data-link="https://www.linkedin.com/in/maximilianoaguirre/">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+        <p class="text-body">Contact me in LinkedIn.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="github" data-link="https://github.com/MaximilianoAguirre">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-brands fa-github"></i> GitHub</p>
+        <p class="text-body">Check the source code of my projects.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+    <div class="card" id="mail" data-link="mailto:maximilianoaguirre@outlook.es">
+      <div class="card-details">
+        <p class="text-title"><i class="fa-regular fa-envelope"></i> Email</p>
+        <p class="text-body">Contact me via email.</p>
+      </div>
+      <button class="card-button">Open</button>
+    </div>
+
+  </div>
 
 </body>
 
-<script src="anime.min.js"></script>
 <script src="tiles.js"></script>
 <script src="text.js"></script>
+<script src="links.js"></script>
 
 </html>
