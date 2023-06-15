@@ -45,7 +45,7 @@ body.toggled>#title {
 
 @media (hover: hover) {
     body.toggled>#tiles>.tile:hover {
-        opacity: 0.1 !important;
+        opacity: 0 !important;
     }
 
     .tile:hover:before {

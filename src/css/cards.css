@@ -1,9 +1,9 @@
 #links {
     background-color: transparent;
 
-    height: calc(100vh - 40px);
-    width: calc(100vw - 40px);
-    padding: 20px;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    padding: 50px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -28,8 +28,7 @@
 @media (min-width: 800px) {
     #links {
         align-content: center;
-        padding: 100px;
-        height: calc(100vh - 200px);
+        padding: 0 100px;
         width: calc(100vw - 200px);
     }
 }
@@ -37,8 +36,7 @@
 @media (min-width: 1200px) {
     #links {
         align-content: center;
-        padding: 300px;
-        height: calc(100vh - 600px);
+        padding: 0 300px;
         width: calc(100vw - 600px);
     }
 }
@@ -56,14 +54,39 @@ body.toggled #links {
     padding: 1.8rem;
     position: relative;
 
-    background: transparent;
-    border: 2px solid var(--g3);
+    background: var(--g5);
     font-family: "Raleway", sans-serif;
     transition: all 0.8s ease-out;
 
     cursor: pointer;
     pointer-events: all;
     user-select: none;
+}
+
+.card::after {
+    position: absolute;
+    content: '';
+    top: calc(-1 * 2px);
+    left: calc(-1 * 2px);
+    z-index: -1;
+    width: calc(100% + 2px * 2);
+    height: calc(100% + 2px * 2);
+    background: linear-gradient(60deg,
+            var(--g4),
+            var(--g1),
+            var(--g2),
+            var(--g4),
+            var(--g3));
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * 2px);
+    animation: moveGradient 4s reverse infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 
@@ -85,9 +108,9 @@ body.toggled>.card {
     transform: translate(-50%, 125%);
     width: 60%;
     border-radius: 1rem;
-    border: 2px solid var(--g1);
+    border: 2px solid var(--g4);
     background-color: var(--g5);
-    color: var(--g1);
+    color: var(--g4);
     font-size: 1rem;
     padding: .5rem 1rem;
     position: absolute;
@@ -115,13 +138,13 @@ body.toggled>.card {
 
 /*Hover*/
 .card:hover {
-    border-color: var(--g1);
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-    background-color: var(--g2);
+    border-color: var(--g4);
+    box-shadow: 0 4px 18px 0 var(--g5);
+    background-color: var(--g5);
 }
 
 .card:hover .card-details {
-    color: var(--g1)
+    color: var(--g4)
 }
 
 .card:hover .text-body {
@@ -134,6 +157,6 @@ body.toggled>.card {
 }
 
 .card-button:hover {
-    background-color: var(--g1);
+    background-color: var(--g4);
     color: var(--g5);
 }
