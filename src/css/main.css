@@ -90,7 +90,7 @@ body.toggled>#title {
 }
 
 #name {
-    color: var(--g3);
+    color: white;
     margin-bottom: 50px;
     font-size: 11vw;
 }
@@ -116,7 +116,7 @@ body.toggled>#title {
 .console-underscore {
     display: inline-block;
     position: relative;
-    color: var(--g3);
+    color: white;
     top: -0.16em;
     left: -0.2em;
 }
